@@ -33,3 +33,15 @@ print(usuario_teste.get("telefone"))            # mesma coisa, "telefone" existe
 print(usuario_teste.get("cpf", "não informado")) # "cpf" NÃO existe no dicionário
                                                   # .get() não quebra o script (diferente de usuario_teste["cpf"], que daria KeyError)
                                                   # como passamos um segundo argumento, retorna "não informado" em vez de None
+
+
+resposta_api = {
+    "usuario": {
+        "email": "qa@empresa.com",
+        "endereco": {
+            "cidade": "Blumenau"
+        }
+    }
+}
+print(resposta_api["usuario"]["email"])
+print(resposta_api["usuario"]["endereco"]["cidade"])
